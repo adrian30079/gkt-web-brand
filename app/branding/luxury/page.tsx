@@ -20,9 +20,9 @@ export default function LuxuryBranding() {
   ];
 
   const fonts = [
-    { name: "標題字體", font: "Noto Serif TC", weight: "900", example: "中國風韻" },
-    { name: "副標題字體", font: "Noto Serif TC", weight: "500", example: "典藏尊貴" },
-    { name: "內文字體", font: "Noto Sans TC", weight: "400", example: "傳統文化精粹" }
+    { name: "標題字體", font: "Noto Serif TC", weight: "900", example: "冬蟲夏草", size: "text-3xl sm:text-4xl md:text-5xl" },
+    { name: "內文字體1", font: "Noto Sans TC", weight: "500", example: "國坤堂是專注冬蟲夏草，致力於打造野生冬蟲夏草第一品牌。", size: "text-xl" },
+    { name: "內文字體2", font: "Noto Sans TC", weight: "400", example: "冬蟲夏草乃中國傳統名貴中藥材，素有軟黃金之美譽，產自青藏高原海拔三千米以上之高寒地帶，冬為蟲、夏為草，珍稀難得。其性甘平，入肺腎二經，能補肺益腎、止咳化痰、秘精益氣調節體質，歷來與人參、鹿茸並列三大滋補上品。選用優質冬蟲夏草，滋養身心，延年益壽，實為養生首選！", size: "text-lg" }
   ];
 
   const moodBoardImages = [
@@ -140,7 +140,7 @@ export default function LuxuryBranding() {
                   </div>
                 </div>
                 <p 
-                  className="text-3xl sm:text-4xl md:text-5xl text-orange-900"
+                  className={`${font.size} text-orange-900`}
                   style={{ 
                     fontFamily: font.font,
                     fontWeight: font.weight 

@@ -19,9 +19,10 @@ export default function ClassicBranding() {
   ];
 
   const fonts = [
-    { name: "標題字體", font: "Noto Serif TC", weight: "700", example: "自然養生" },
-    { name: "標題字體2", font: "var(--font-shan-cha-ya-kai-2)", weight: "400", example: "水墨山水" },
-    { name: "內文字體", font: "Noto Sans TC", weight: "400", example: "中國傳統水墨美學" }
+    { name: "標題字體", font: "SCYK", weight: "normal", example: "冬蟲夏草", size: "text-4xl sm:text-5xl md:text-6xl" },
+    { name: "標題字體2", font: "SCYK", weight: "normal", example: "冬蟲夏草", size: "text-2xl sm:text-3xl md:text-4xl" },
+    { name: "內文字體1", font: "ChillKai", weight: "700", example: "國坤堂是專注冬蟲夏草，致力於打造野生冬蟲夏草第一品牌。", size: "text-xl" },
+    { name: "內文字體2", font: "ChillKai", weight: "400", example: "冬蟲夏草乃中國傳統名貴中藥材，素有軟黃金之美譽，產自青藏高原海拔三千米以上之高寒地帶，冬為蟲、夏為草，珍稀難得。其性甘平，入肺腎二經，能補肺益腎、止咳化痰、秘精益氣調節體質，歷來與人參、鹿茸並列三大滋補上品。選用優質冬蟲夏草，滋養身心，延年益壽，實為養生首選！", size: "text-lg" }
   ];
 
   const moodBoardImages = [
@@ -48,7 +49,7 @@ export default function ClassicBranding() {
       {/* Navigation */}
       <BrandingNav currentBranding="classic" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 space-y-8 sm:space-y-10 lg:space-y-12">
+      <div className="container xl:max-w-6xl lg:max-w-6xl md:max-w-4xl sm:max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 space-y-8 sm:space-y-10 lg:space-y-12">
         {/* Hero Section */}
         <section className="text-center space-y-3 sm:space-y-4">
           <div className="flex justify-center mb-4 sm:mb-6">
@@ -153,7 +154,7 @@ export default function ClassicBranding() {
                   </div>
                 </div>
                 <p 
-                  className="text-3xl sm:text-4xl md:text-5xl text-stone-900"
+                  className={`${font.size} text-stone-900`}
                   style={{ 
                     fontFamily: font.font,
                     fontWeight: font.weight 

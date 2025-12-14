@@ -1,6 +1,137 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Local fonts from app/font/... */
+@font-face {
+  font-family: "SCYK";
+  src: url("/font/font-2/SCYK.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ChillKai";
+  src: url("/font/font-1/ChillKai.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "ChillKai";
+  src: url("/font/font-1/ChillKai.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SweiB2SugarCJKtc";
+  src: url("/font/font-2/SweiB2SugarCJKtc-ExtraLight.ttf") format("truetype");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SweiB2SugarCJKtc";
+  src: url("/font/font-2/SweiB2SugarCJKtc-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SweiB2SugarCJKtc";
+  src: url("/font/font-2/SweiB2SugarCJKtc-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SweiB2SugarCJKtc";
+  src: url("/font/font-2/SweiB2SugarCJKtc-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SweiB2SugarCJKtc";
+  src: url("/font/font-2/SweiB2SugarCJKtc-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SweiB2SugarCJKtc";
+  src: url("/font/font-2/SweiB2SugarCJKtc-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SweiB2SugarCJKtc";
+  src: url("/font/font-2/SweiB2SugarCJKtc-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "SweiHalfMoonCJKtc";
+  src: url("/font/font-1/SweiHalfMoonCJKtc-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SweiHalfMoonCJKtc";
+  src: url("/font/font-1/SweiHalfMoonCJKtc-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SweiHalfMoonCJKtc";
+  src: url("/font/font-1/SweiHalfMoonCJKtc-DemiLight.ttf") format("truetype");
+  font-weight: 350;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SweiHalfMoonCJKtc";
+  src: url("/font/font-1/SweiHalfMoonCJKtc-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SweiHalfMoonCJKtc";
+  src: url("/font/font-1/SweiHalfMoonCJKtc-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SweiHalfMoonCJKtc";
+  src: url("/font/font-1/SweiHalfMoonCJKtc-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "SweiHalfMoonCJKtc";
+  src: url("/font/font-1/SweiHalfMoonCJKtc-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
