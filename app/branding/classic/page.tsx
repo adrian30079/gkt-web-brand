@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { BrandingNav } from "@/components/branding-nav";
 
 export default function ClassicBranding() {
   const colors = [
@@ -45,129 +46,114 @@ export default function ClassicBranding() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 to-stone-100">
       {/* Navigation */}
-      <nav className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/">
-            <Button variant="ghost">← 返回首頁</Button>
-          </Link>
-          <h2 className="text-xl font-bold text-stone-900">自然水墨</h2>
-          <div className="w-24" />
-        </div>
-      </nav>
+      <BrandingNav currentBranding="classic" />
 
-      <div className="container mx-auto px-4 py-12 space-y-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 space-y-8 sm:space-y-10 lg:space-y-12">
         {/* Hero Section */}
-        <section className="text-center space-y-4">
-          <div className="flex justify-center mb-6">
+        <section className="text-center space-y-3 sm:space-y-4">
+          <div className="flex justify-center mb-4 sm:mb-6">
             <Image
               src="/img/guokuntang-logo-dark.png"
               alt="國坤堂"
               width={300}
               height={80}
-              className="h-20 w-auto"
+              className="h-16 sm:h-20 w-auto"
               priority
             />
           </div>
-          <p className="text-xl text-stone-700 max-w-2xl mx-auto">
-            國坤堂以「自然」為底，以「水墨山水」為形：用不規則的墨韻與留白，刻畫傳統中國的審美與氣韻。
+          {/* <p className="text-lg sm:text-xl text-stone-700 max-w-2xl mx-auto px-4">
+            國坤堂以「<strong className="font-bold text-stone-900">自然水墨</strong>」為底，以「水墨山水」為形：用不規則的墨韻與留白，刻畫傳統中國的審美與氣韻。
             這份視覺背後，是對品質近乎苛刻的追求——每一次呈現，都必須像一筆落墨般乾淨、準確、經得起反覆凝視。
-          </p>
+          </p> */}
         </section>
 
         {/* Brand Essence */}
-        <Card className="border-stone-200">
+        <Card className="border-stone-200 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl text-stone-900">品牌核心</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-stone-900">自然水墨</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-4 sm:space-y-6">
             <div>
-              <h3 className="text-xl font-semibold mb-2 text-stone-800">品牌理念</h3>
-              <p className="text-lg text-stone-950">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-stone-800">理念</h3>
+              <p className="text-base sm:text-lg text-stone-950">
                 以中國傳統為骨、水墨山水為魂，建立一套「不規則」的品牌設計語言：墨痕暈染、山勢起伏、雲氣流動皆可成為版面結構。
                 國坤堂對品質的追求近乎苛刻——就像曾以「一根可以嚼著吃的冬蟲夏草」開創新品類並獲得市場肯定那樣，
                 每一次呈現都必須乾淨、準確、耐看；每一處留白都要經得起反覆推敲，讓信任在細節裡自然累積。
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2 text-stone-800">核心價值</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-stone-800">核心價值</h3>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="text-base py-2 px-4">自然</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">傳統</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">水墨</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">禪意</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">和諧</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">匠心</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">自然</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">傳統</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">水墨</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">禪意</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">和諧</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">匠心</Badge>
               </div>
             </div>
           </CardContent>
         </Card>
 
         {/* Color Palette */}
-        <Card className="border-stone-200">
+        <Card className="border-stone-200 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl text-stone-900">色彩系統</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-stone-900">色彩系統</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {/* Row 1 */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
                 {colors.filter(c => c.row === 1).map((color, index) => (
                   <div key={index} className="space-y-2">
                     <div 
-                      className="h-32 rounded-lg shadow-lg border-2 border-stone-200"
+                      className="h-24 sm:h-28 md:h-32 rounded-lg shadow-lg border-2 border-stone-200"
                       style={{ backgroundColor: color.hex }}
                     />
                     <div>
-                      <p className="font-semibold text-stone-900">{color.name}</p>
-                      <p className="text-sm text-stone-700">{color.description}</p>
+                      <p className="font-semibold text-stone-900 text-sm sm:text-base">{color.name}</p>
+                      <p className="text-xs sm:text-sm text-stone-700">{color.description}</p>
                       <p className="text-xs text-stone-600 font-mono">{color.hex}</p>
                     </div>
                   </div>
                 ))}
               </div>
               {/* Row 2 */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
                 {colors.filter(c => c.row === 2).map((color, index) => (
                   <div key={index} className="space-y-2">
                     <div 
-                      className="h-32 rounded-lg shadow-lg border-2 border-stone-200"
+                      className="h-24 sm:h-28 md:h-32 rounded-lg shadow-lg border-2 border-stone-200"
                       style={{ backgroundColor: color.hex }}
                     />
                     <div>
-                      <p className="font-semibold text-stone-900">{color.name}</p>
-                      <p className="text-sm text-stone-700">{color.description}</p>
+                      <p className="font-semibold text-stone-900 text-sm sm:text-base">{color.name}</p>
+                      <p className="text-xs sm:text-sm text-stone-700">{color.description}</p>
                       <p className="text-xs text-stone-600 font-mono">{color.hex}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            <div className="mt-6 p-4 bg-stone-50 rounded-lg border border-stone-200">
-              <p className="text-stone-900">
-                <strong>色彩意涵：</strong>
-                淺灰與香檳色營造水墨暈染的柔和質感，金色與勃艮第紅作為點綴，
-                象徵珍貴與內斂的力量，傳達自然雅致、禪意深遠的品牌氛圍。
-              </p>
-            </div>
           </CardContent>
         </Card>
 
         {/* Typography */}
-        <Card className="border-stone-200">
+        <Card className="border-stone-200 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl text-stone-900">字體系統</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-stone-900">字體系統</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-4 sm:space-y-6">
             {fonts.map((font, index) => (
-              <div key={index} className="border-b border-stone-200 pb-6 last:border-0">
-                <div className="flex justify-between items-start mb-4">
+              <div key={index} className="border-b border-stone-200 pb-4 sm:pb-6 last:border-0">
+                <div className="flex justify-between items-start mb-3 sm:mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-stone-800">{font.name}</h3>
-                    <p className="text-stone-600">{font.font} · {font.weight}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold text-stone-800">{font.name}</h3>
+                    <p className="text-sm sm:text-base text-stone-600">{font.font} · {font.weight}</p>
                   </div>
                 </div>
                 <p 
-                  className="text-5xl text-stone-900"
+                  className="text-3xl sm:text-4xl md:text-5xl text-stone-900"
                   style={{ 
                     fontFamily: font.font,
                     fontWeight: font.weight 
@@ -181,15 +167,15 @@ export default function ClassicBranding() {
         </Card>
 
         {/* Tone & Voice */}
-        <Card className="border-stone-200">
+        <Card className="border-stone-200 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl text-stone-900">語調風格</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-stone-900">語調風格</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-stone-800">溝通調性</h3>
-                <ul className="space-y-2 text-lg text-stone-950">
+                <h3 className="text-lg sm:text-xl font-semibold text-stone-800">溝通調性</h3>
+                <ul className="space-y-2 text-base sm:text-lg text-stone-950">
                   <li>• 自信但克制</li>
                   <li>• 品質先於修辭</li>
                   <li>• 專業且真誠</li>
@@ -198,13 +184,13 @@ export default function ClassicBranding() {
                 </ul>
               </div>
               <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-stone-800">文案範例</h3>
-                <div className="space-y-4 text-stone-950">
-                  <p className="p-4 bg-stone-50 rounded border border-stone-200">
+                <h3 className="text-lg sm:text-xl font-semibold text-stone-800">文案範例</h3>
+                <div className="space-y-4 text-sm sm:text-base text-stone-950">
+                  <p className="p-3 sm:p-4 bg-stone-50 rounded border border-stone-200">
                     「國坤堂以『一根可以嚼著吃的冬蟲夏草』開創新品類，背後不是噱頭，而是對品質近乎苛刻的追求。
                     這份堅持，讓每一次被看見的細節都經得起檢視，也讓每一次被選擇都更值得信賴。」
                   </p>
-                  <p className="p-4 bg-stone-50 rounded border border-stone-200">
+                  <p className="p-3 sm:p-4 bg-stone-50 rounded border border-stone-200">
                     「在水墨山水的留白之間，我們把標準寫得更清楚：該嚴選的絕不妥協，該把關的絕不省略。
                     你看到的『雅』，源自看不見的『嚴』——每一處克制，都是為了讓真正的好自然浮現。」
                   </p>
@@ -215,20 +201,20 @@ export default function ClassicBranding() {
         </Card>
 
         {/* Mood Board */}
-        <Card className="border-stone-200">
+        <Card className="border-stone-200 shadow-lg">
           <CardHeader>
-            <CardTitle className="text-3xl text-stone-900">Mood Board</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-stone-900">Mood Board</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-stone-950 mb-6">
+            <p className="text-sm sm:text-base text-stone-950 mb-4 sm:mb-6">
               蒐集水墨山水意境、自然質樸元素、不規則流動造型，作為「自然水墨」視覺語言的靈感泉源。
             </p>
 
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 sm:gap-4">
               {moodBoardImages.map((src, index) => (
                 <div
                   key={src}
-                  className="mb-4 overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm"
+                  className="mb-3 sm:mb-4 overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm"
                   style={{ breakInside: "avoid" }}
                 >
                   <Image
@@ -243,20 +229,13 @@ export default function ClassicBranding() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 p-4 bg-stone-50 rounded-lg border border-stone-200">
-              <p className="text-stone-900">
-                <strong>使用建議：</strong>
-                從情緒板萃取「水墨暈染」、「山水留白」、「不規則線條」與「自然質感」，
-                並套用於品牌主視覺、包裝與空間設計，營造禪意悠遠的品牌調性。
-              </p>
-            </div>
           </CardContent>
         </Card>
 
         {/* Call to Action */}
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-4 pb-4 sm:pb-6">
           <Link href="/">
-            <Button size="lg" className="text-lg px-8">
+            <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8">
               返回首頁
             </Button>
           </Link>

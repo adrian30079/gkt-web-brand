@@ -21,6 +21,49 @@ const shanChaYaKai2 = localFont({
   src: "../public/font/font-2/ShanChaYaKai-2.ttf",
   variable: "--font-shan-cha-ya-kai-2",
   display: "swap",
+  weight: "400",
+});
+
+const sweiHalfMoon = localFont({
+  src: [
+    {
+      path: "../public/font/font-1/SweiHalfMoonCJKtc-Thin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../public/font/font-1/SweiHalfMoonCJKtc-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/font/font-1/SweiHalfMoonCJKtc-DemiLight.ttf",
+      weight: "350",
+      style: "normal",
+    },
+    {
+      path: "../public/font/font-1/SweiHalfMoonCJKtc-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/font/font-1/SweiHalfMoonCJKtc-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/font/font-1/SweiHalfMoonCJKtc-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/font/font-1/SweiHalfMoonCJKtc-Black.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-swei-half-moon",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -36,7 +79,7 @@ export default function RootLayout({
   return (
     <html lang="zh-TW">
       <body
-        className={`${notoSansTC.variable} ${notoSerifTC.variable} ${shanChaYaKai2.variable} antialiased`}
+        className={`${notoSansTC.variable} ${notoSerifTC.variable} ${shanChaYaKai2.variable} ${sweiHalfMoon.variable} antialiased`}
       >
         {children}
       </body>

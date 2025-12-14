@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { BrandingNav } from "@/components/branding-nav";
 
 export default function LuxuryBranding() {
   const colors = [
@@ -34,56 +35,48 @@ export default function LuxuryBranding() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-red-50">
       {/* Navigation */}
-      <nav className="border-b bg-white/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link href="/">
-            <Button variant="ghost">← 返回首頁</Button>
-          </Link>
-          <h2 className="text-xl font-bold text-orange-900">中國風韻</h2>
-          <div className="w-24" />
-        </div>
-      </nav>
+      <BrandingNav currentBranding="luxury" />
 
-      <div className="container mx-auto px-4 py-12 space-y-12">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 space-y-8 sm:space-y-10 lg:space-y-12">
         {/* Hero Section */}
-        <section className="text-center space-y-4">
-          <div className="flex justify-center mb-6">
+        <section className="text-center space-y-3 sm:space-y-4">
+          <div className="flex justify-center mb-4 sm:mb-6">
             <Image
               src="/img/guokuntang-logo-dark.png"
               alt="國坤堂"
               width={300}
               height={80}
-              className="h-20 w-auto"
+              className="h-16 sm:h-20 w-auto"
               priority
             />
           </div>
-          <p className="text-xl text-orange-700 max-w-2xl mx-auto">
-            傳承中華傳統文化精髓，以濃郁的中國風色彩語言，
+          {/* <p className="text-lg sm:text-xl text-orange-700 max-w-2xl mx-auto px-4">
+            傳承中華傳統文化精髓，以濃郁的<strong className="font-bold text-orange-900">中國風韻</strong>色彩語言，
             呈現典藏級的文化底蘊與民族自信，彰顯品牌的獨特魅力與深厚根基。
-          </p>
+          </p> */}
         </section>
 
         {/* Brand Essence */}
         <Card className="border-stone-200 shadow-xl">
           <CardHeader>
-            <CardTitle className="text-3xl text-orange-900">品牌核心</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-orange-900">中國風韻</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4">
+          <CardContent className="space-y-4 sm:space-y-6">
             <div>
-              <h3 className="text-xl font-semibold mb-2 text-orange-800">品牌理念</h3>
-              <p className="text-lg text-orange-950">
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-orange-800">理念</h3>
+              <p className="text-base sm:text-lg text-orange-950">
                 以傳統中國文化元素為設計核心，運用鮮明的色彩對比與經典圖騰，
                 展現民族文化自信與歷史傳承的厚重感，為品牌注入濃郁的東方韻味。
               </p>
             </div>
             <div>
-              <h3 className="text-xl font-semibold mb-2 text-orange-800">核心價值</h3>
+              <h3 className="text-lg sm:text-xl font-semibold mb-2 text-orange-800">核心價值</h3>
               <div className="flex flex-wrap gap-2">
-                <Badge variant="secondary" className="text-base py-2 px-4">中國風</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">傳統</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">典藏</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">文化</Badge>
-                <Badge variant="secondary" className="text-base py-2 px-4">自信</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">中國風</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">傳統</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">典藏</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">文化</Badge>
+                <Badge variant="secondary" className="text-sm sm:text-base py-1.5 sm:py-2 px-3 sm:px-4">自信</Badge>
               </div>
             </div>
           </CardContent>
@@ -92,49 +85,42 @@ export default function LuxuryBranding() {
         {/* Color Palette */}
         <Card className="border-stone-200 shadow-xl">
           <CardHeader>
-            <CardTitle className="text-3xl text-orange-900">色彩系統</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-orange-900">色彩系統</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               {/* Row 1 */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
                 {colors.filter(c => c.row === 1).map((color, index) => (
                   <div key={index} className="space-y-2">
                     <div 
-                      className="h-32 rounded-lg shadow-lg border-2 border-stone-200"
+                      className="h-24 sm:h-28 md:h-32 rounded-lg shadow-lg border-2 border-stone-200"
                       style={{ backgroundColor: color.hex }}
                     />
                     <div>
-                      <p className="font-semibold text-orange-900">{color.name}</p>
-                      <p className="text-sm text-orange-700">{color.description}</p>
+                      <p className="font-semibold text-orange-900 text-sm sm:text-base">{color.name}</p>
+                      <p className="text-xs sm:text-sm text-orange-700">{color.description}</p>
                       <p className="text-xs text-orange-600 font-mono">{color.hex}</p>
                     </div>
                   </div>
                 ))}
               </div>
               {/* Row 2 */}
-              <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
                 {colors.filter(c => c.row === 2).map((color, index) => (
                   <div key={index} className="space-y-2">
                     <div 
-                      className="h-32 rounded-lg shadow-lg border-2 border-stone-200"
+                      className="h-24 sm:h-28 md:h-32 rounded-lg shadow-lg border-2 border-stone-200"
                       style={{ backgroundColor: color.hex }}
                     />
                     <div>
-                      <p className="font-semibold text-orange-900">{color.name}</p>
-                      <p className="text-sm text-orange-700">{color.description}</p>
+                      <p className="font-semibold text-orange-900 text-sm sm:text-base">{color.name}</p>
+                      <p className="text-xs sm:text-sm text-orange-700">{color.description}</p>
                       <p className="text-xs text-orange-600 font-mono">{color.hex}</p>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
-            <div className="mt-6 p-4 bg-orange-50 rounded-lg border border-stone-200">
-              <p className="text-orange-900">
-                <strong>色彩意涵：</strong>
-                橙紅與中國紅展現熱情與喜慶，青藍作為輔色形成對比平衡，
-                金色彰顯尊貴，傳達濃郁的中國傳統文化氣息與民族自豪感。
-              </p>
             </div>
           </CardContent>
         </Card>
@@ -142,19 +128,19 @@ export default function LuxuryBranding() {
         {/* Typography */}
         <Card className="border-stone-200 shadow-xl">
           <CardHeader>
-            <CardTitle className="text-3xl text-orange-900">字體系統</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-orange-900">字體系統</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-6">
+          <CardContent className="space-y-4 sm:space-y-6">
             {fonts.map((font, index) => (
-              <div key={index} className="border-b border-stone-200 pb-6 last:border-0">
-                <div className="flex justify-between items-start mb-4">
+              <div key={index} className="border-b border-stone-200 pb-4 sm:pb-6 last:border-0">
+                <div className="flex justify-between items-start mb-3 sm:mb-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-orange-800">{font.name}</h3>
-                    <p className="text-orange-600">{font.font} · {font.weight}</p>
+                    <h3 className="text-lg sm:text-xl font-semibold text-orange-800">{font.name}</h3>
+                    <p className="text-sm sm:text-base text-orange-600">{font.font} · {font.weight}</p>
                   </div>
                 </div>
                 <p 
-                  className="text-5xl text-orange-900"
+                  className="text-3xl sm:text-4xl md:text-5xl text-orange-900"
                   style={{ 
                     fontFamily: font.font,
                     fontWeight: font.weight 
@@ -170,13 +156,13 @@ export default function LuxuryBranding() {
         {/* Tone & Voice */}
         <Card className="border-stone-200 shadow-xl">
           <CardHeader>
-            <CardTitle className="text-3xl text-orange-900">語調風格</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-orange-900">語調風格</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-orange-800">溝通調性</h3>
-                <ul className="space-y-2 text-lg text-orange-950">
+                <h3 className="text-lg sm:text-xl font-semibold text-orange-800">溝通調性</h3>
+                <ul className="space-y-2 text-base sm:text-lg text-orange-950">
                   <li>• 文化自信</li>
                   <li>• 傳統而不守舊</li>
                   <li>• 熱情且積極</li>
@@ -185,12 +171,12 @@ export default function LuxuryBranding() {
                 </ul>
               </div>
               <div className="space-y-3">
-                <h3 className="text-xl font-semibold text-orange-800">文案範例</h3>
-                <div className="space-y-4 text-orange-950">
-                  <p className="p-4 bg-orange-50 rounded border border-stone-200">
+                <h3 className="text-lg sm:text-xl font-semibold text-orange-800">文案範例</h3>
+                <div className="space-y-4 text-sm sm:text-base text-orange-950">
+                  <p className="p-3 sm:p-4 bg-orange-50 rounded border border-stone-200">
                     「傳承千年中華養生精粹，彰顯東方文化自信」
                   </p>
-                  <p className="p-4 bg-orange-50 rounded border border-stone-200">
+                  <p className="p-3 sm:p-4 bg-orange-50 rounded border border-stone-200">
                     「以中國風韻，詮釋當代養生的文化底蘊」
                   </p>
                 </div>
@@ -202,18 +188,18 @@ export default function LuxuryBranding() {
         {/* Mood Board */}
         <Card className="border-stone-200 shadow-xl">
           <CardHeader>
-            <CardTitle className="text-3xl text-orange-900">Mood Board</CardTitle>
+            <CardTitle className="text-2xl sm:text-3xl text-orange-900">Mood Board</CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-orange-950 mb-6">
+            <p className="text-sm sm:text-base text-orange-950 mb-4 sm:mb-6">
               典藏中國傳統文化元素、鮮明色彩對比與經典圖騰，作為「中國風韻」視覺語言的設計基調。
             </p>
 
-            <div className="columns-1 sm:columns-2 lg:columns-3 gap-4">
+            <div className="columns-1 sm:columns-2 lg:columns-3 gap-3 sm:gap-4">
               {moodBoardImages.map((src, index) => (
                 <div
                   key={src}
-                  className="mb-4 overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm"
+                  className="mb-3 sm:mb-4 overflow-hidden rounded-lg border border-stone-200 bg-white shadow-sm"
                   style={{ breakInside: "avoid" }}
                 >
                   <Image
@@ -228,20 +214,13 @@ export default function LuxuryBranding() {
                 </div>
               ))}
             </div>
-            <div className="mt-6 p-4 bg-orange-50 rounded-lg border border-stone-200">
-              <p className="text-orange-900">
-                <strong>使用建議：</strong>
-                從情緒板萃取「中國紅」、「傳統圖騰」、「色彩對比」與「文化符號」，
-                並融入品牌主視覺、包裝設計與空間陳設，凸顯品牌的民族文化底蘊與東方魅力。
-              </p>
-            </div>
           </CardContent>
         </Card>
 
         {/* Call to Action */}
-        <div className="text-center space-y-4">
+        <div className="text-center space-y-4 pb-4 sm:pb-6">
           <Link href="/">
-            <Button size="lg" className="text-lg px-8 bg-orange-900 hover:bg-orange-800">
+            <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 bg-orange-900 hover:bg-orange-800">
               返回首頁
             </Button>
           </Link>
