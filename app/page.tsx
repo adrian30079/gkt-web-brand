@@ -68,7 +68,7 @@ export default function Home() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <Button className="w-full" size="lg">
+                  <Button className="w-full cursor-pointer" size="lg">
                     查看詳情
                   </Button>
                 </CardContent>

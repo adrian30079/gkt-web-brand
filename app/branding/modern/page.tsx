@@ -48,7 +48,7 @@ export default function ModernBranding() {
       {/* Navigation */}
       <BrandingNav currentBranding="modern" />
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 space-y-8 sm:space-y-10 lg:space-y-12">
+      <div className="container xl:max-w-6xl lg:max-w-6xl md:max-w-4xl sm:max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12 space-y-8 sm:space-y-10 lg:space-y-12">
         {/* Hero Section */}
         <section className="text-center space-y-3 sm:space-y-4">
           <div className="flex justify-center mb-4 sm:mb-6">
@@ -68,12 +68,12 @@ export default function ModernBranding() {
         </section>
 
         {/* Brand Essence */}
-        <Card className="border-stone-200 shadow-lg">
-          <CardHeader>
+        <Card className="border-stone-200 shadow-lg py-12">
+          <CardHeader className="px-12">
             <CardTitle className="text-2xl sm:text-3xl text-stone-900">現代養生
             </CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4 sm:space-y-6">
+          <CardContent className="px-12 space-y-4 sm:space-y-6">
             <div>
               <h3 className="text-lg sm:text-xl font-semibold mb-2 text-stone-800">理念</h3>
               <p className="text-base sm:text-lg text-stone-950">
@@ -97,11 +97,11 @@ export default function ModernBranding() {
         </Card>
 
         {/* Color Palette */}
-        <Card className="border-stone-200 shadow-lg">
-          <CardHeader>
+        <Card className="border-stone-200 shadow-lg py-12">
+          <CardHeader className="px-12">
             <CardTitle className="text-2xl sm:text-3xl text-stone-900">色彩系統</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="px-12">
             <div className="space-y-4">
               {/* Row 1 */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4">
@@ -140,11 +140,11 @@ export default function ModernBranding() {
         </Card>
 
         {/* Typography */}
-        <Card className="border-stone-200 shadow-lg">
-          <CardHeader>
+        <Card className="border-stone-200 shadow-lg py-12">
+          <CardHeader className="px-12">
             <CardTitle className="text-2xl sm:text-3xl text-stone-900">字體系統</CardTitle>
           </CardHeader>
-          <CardContent className="space-y-4 sm:space-y-6">
+          <CardContent className="px-12 space-y-4 sm:space-y-6">
             {fonts.map((font, index) => (
               <div key={index} className="border-b border-stone-200 pb-4 sm:pb-6 last:border-0">
                 <div className="flex justify-between items-start mb-3 sm:mb-4">
@@ -168,11 +168,11 @@ export default function ModernBranding() {
         </Card>
 
         {/* Tone & Voice */}
-        <Card className="border-stone-200 shadow-lg">
-          <CardHeader>
+        <Card className="border-stone-200 shadow-lg py-12">
+          <CardHeader className="px-12">
             <CardTitle className="text-2xl sm:text-3xl text-stone-900">語調風格</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="px-12">
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-3">
                 <h3 className="text-lg sm:text-xl font-semibold text-stone-800">溝通調性</h3>
@@ -202,11 +202,11 @@ export default function ModernBranding() {
         </Card>
 
         {/* Mood Board */}
-        <Card className="border-stone-200 shadow-lg">
-          <CardHeader>
+        <Card className="border-stone-200 shadow-lg py-12">
+          <CardHeader className="px-12">
             <CardTitle className="text-2xl sm:text-3xl text-stone-900">Mood Board</CardTitle>
           </CardHeader>
-          <CardContent>
+          <CardContent className="px-12">
             <p className="text-sm sm:text-base text-stone-950 mb-4 sm:mb-6">
               匯集現代空間設計、簡約線條美學、健康生活元素，作為「現代養生」視覺語言的靈感來源。
             </p>
