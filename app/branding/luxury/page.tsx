@@ -57,11 +57,11 @@ export default function LuxuryBranding() {
         </section>
 
         {/* Brand Essence */}
-        <Card className="border-stone-200 shadow-xl py-12">
-          <CardHeader className="px-12">
+        <Card className="border-stone-200 shadow-xl py-8 sm:py-12">
+          <CardHeader className="px-6 sm:px-12">
             <CardTitle className="text-2xl sm:text-3xl text-orange-900">中國風韻</CardTitle>
           </CardHeader>
-          <CardContent className="px-12 space-y-4 sm:space-y-6">
+          <CardContent className="px-6 sm:px-12 space-y-4 sm:space-y-6">
             <div>
               <h3 className="text-lg sm:text-xl font-semibold mb-2 text-orange-800">理念</h3>
               <p className="text-base sm:text-lg text-orange-950">
@@ -83,11 +83,11 @@ export default function LuxuryBranding() {
         </Card>
 
         {/* Color Palette */}
-        <Card className="border-stone-200 shadow-xl py-12">
-          <CardHeader className="px-12">
+        <Card className="border-stone-200 shadow-xl py-8 sm:py-12">
+          <CardHeader className="px-6 sm:px-12">
             <CardTitle className="text-2xl sm:text-3xl text-orange-900">色彩系統</CardTitle>
           </CardHeader>
-          <CardContent className="px-12">
+          <CardContent className="px-6 sm:px-12">
             <div className="space-y-4">
               {/* Row 1 */}
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4">
@@ -126,11 +126,11 @@ export default function LuxuryBranding() {
         </Card>
 
         {/* Typography */}
-        <Card className="border-stone-200 shadow-xl py-12">
-          <CardHeader className="px-12">
+        <Card className="border-stone-200 shadow-xl py-8 sm:py-12">
+          <CardHeader className="px-6 sm:px-12">
             <CardTitle className="text-2xl sm:text-3xl text-orange-900">字體系統</CardTitle>
           </CardHeader>
-          <CardContent className="px-12 space-y-4 sm:space-y-6">
+          <CardContent className="px-6 sm:px-12 space-y-4 sm:space-y-6">
             {fonts.map((font, index) => (
               <div key={index} className="border-b border-stone-200 pb-4 sm:pb-6 last:border-0">
                 <div className="flex justify-between items-start mb-3 sm:mb-4">
@@ -154,11 +154,11 @@ export default function LuxuryBranding() {
         </Card>
 
         {/* Tone & Voice */}
-        <Card className="border-stone-200 shadow-xl py-12">
-          <CardHeader className="px-12">
+        <Card className="border-stone-200 shadow-xl py-8 sm:py-12">
+          <CardHeader className="px-6 sm:px-12">
             <CardTitle className="text-2xl sm:text-3xl text-orange-900">語調風格</CardTitle>
           </CardHeader>
-          <CardContent className="px-12">
+          <CardContent className="px-6 sm:px-12">
             <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               <div className="space-y-3">
                 <h3 className="text-lg sm:text-xl font-semibold text-orange-800">溝通調性</h3>
@@ -186,11 +186,11 @@ export default function LuxuryBranding() {
         </Card>
 
         {/* Mood Board */}
-        <Card className="border-stone-200 shadow-xl py-12">
-          <CardHeader className="px-12">
+        <Card className="border-stone-200 shadow-xl py-8 sm:py-12">
+          <CardHeader className="px-6 sm:px-12">
             <CardTitle className="text-2xl sm:text-3xl text-orange-900">Mood Board</CardTitle>
           </CardHeader>
-          <CardContent className="px-12">
+          <CardContent className="px-6 sm:px-12">
             <p className="text-sm sm:text-base text-orange-950 mb-4 sm:mb-6">
               典藏中國傳統文化元素、鮮明色彩對比與經典圖騰，作為「中國風韻」視覺語言的設計基調。
             </p>
